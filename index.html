@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streak.ai</title>
+    <link rel="icon" type="image/png" href="image/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        cream: '#F9F9F6',
+                        charcoal: '#111111',
+                        'soft-gray': '#E5E5E5',
+                        'accent-red': '#E74C3C',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; frame-ancestors 'none'">
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/70 border-b border-gray-100/50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <img src="image/icon.png" alt="Streak.ai" class="w-8 h-8">
+                    <span class="font-bold text-xl tracking-tight">Streak.ai</span>
+                </div>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#" class="nav-link text-sm font-medium text-gray-700 hover:text-charcoal">Home</a>
+                    <a href="#features" class="nav-link text-sm font-medium text-gray-700 hover:text-charcoal">Features</a>
+                    <a href="#about" class="nav-link text-sm font-medium text-gray-700 hover:text-charcoal">About</a>
+                    <a href="#faq" class="nav-link text-sm font-medium text-gray-700 hover:text-charcoal">FAQ</a>
+                </div>
+
+                <!-- Download Badges -->
+                <div class="hidden md:flex items-center gap-3">
+                    <button id="appStoreNav" class="app-store-btn bg-black text-white px-4 py-2 rounded-lg flex items-center gap-2 text-xs font-medium">
+                        <svg width="16" height="16" viewBox="0 0 384 512">
+                            <defs>
+                                <linearGradient id="appleGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffffff"/>
+                                    <stop offset="100%" stop-color="#d1d5db"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#appleGradNav)" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-111.1-59.4-126.5zM231.6 2.7c-22.6 1-45.6 13.7-59.6 32.6-13 17.7-23.5 43.7-19.5 69.5 24.7 2.4 48.8-12.5 62.6-31.2 13.3-18.3 21.1-43.2 16.5-70.9z"/>
+                        </svg>
+                        App Store
+                    </button>
+                    <a href="https://play.google.com/store/apps/details?id=com.streakup.ai&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="app-store-btn bg-black text-white px-4 py-2 rounded-lg flex items-center gap-2 text-xs font-medium">
+                        <svg width="16" height="16" viewBox="0 0 512 512">
+                            <defs>
+                                <linearGradient id="gNav1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00A0E4"/>
+                                    <stop offset="100%" stop-color="#0079CA"/>
+                                </linearGradient>
+                                <linearGradient id="gNav2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00F076"/>
+                                    <stop offset="100%" stop-color="#04C965"/>
+                                </linearGradient>
+                                <linearGradient id="gNav3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#FF3A44"/>
+                                    <stop offset="100%" stop-color="#E11732"/>
+                                </linearGradient>
+                                <linearGradient id="gNav4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#FFE000"/>
+                                    <stop offset="100%" stop-color="#FFB300"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z" fill="url(#gNav1)"/>
+                            <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z" fill="url(#gNav3)"/>
+                            <path d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="url(#gNav2)"/>
+                            <path d="M472.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8z" fill="url(#gNav4)"/>
+                        </svg>
+                        Google Play
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="hamburgerBtn" class="hamburger md:hidden flex flex-col gap-1.5 p-2">
+                    <span class="w-5 h-0.5 bg-charcoal block"></span>
+                    <span class="w-5 h-0.5 bg-charcoal block"></span>
+                    <span class="w-5 h-0.5 bg-charcoal block"></span>
+                </button>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileOverlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40 md:hidden"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-50 p-8 md:hidden">
+        <button id="mobileMenuClose" class="absolute top-4 right-4 p-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="flex flex-col gap-6 mt-12">
+            <a href="#" class="text-lg font-medium text-charcoal">Home</a>
+            <a href="#features" class="text-lg font-medium text-gray-600">Features</a>
+            <a href="#about" class="text-lg font-medium text-gray-600">About</a>
+            <a href="#faq" class="text-lg font-medium text-gray-600">FAQ</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 lg:pt-40 lg:pb-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <!-- Left Column -->
+                <div class="space-y-8">
+
+                    <!-- Headline -->
+                    <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight">
+                        Meet Streak.ai<br>
+                        <span class="text-gray-400">Track your calories</span><br>
+                        with just a picture
+                    </h1>
+
+                    <!-- Subtext -->
+                    <p class="text-lg text-gray-600 max-w-lg leading-relaxed">
+                        Snap a photo of any meal and our AI instantly recognizes ingredients, calculates calories, and breaks down your macros. No more manual logging just point, shoot, and track.
+                    </p>
+
+                    <!-- Download Buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <button id="appStoreHero" class="app-store-btn bg-black text-white px-6 py-4 rounded-2xl flex items-center gap-3">
+                            <svg width="28" height="28" viewBox="0 0 384 512">
+                            <defs>
+                                <linearGradient id="appleGradHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffffff"/>
+                                    <stop offset="100%" stop-color="#d1d5db"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#appleGradHero)" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-111.1-59.4-126.5zM231.6 2.7c-22.6 1-45.6 13.7-59.6 32.6-13 17.7-23.5 43.7-19.5 69.5 24.7 2.4 48.8-12.5 62.6-31.2 13.3-18.3 21.1-43.2 16.5-70.9z"/>
+                            </svg>
+                            <div class="text-left">
+                                <div class="text-xs opacity-70">Download on the</div>
+                                <div class="text-sm font-semibold">App Store</div>
+                            </div>
+                        </button>
+                        <a href="https://play.google.com/store/apps/details?id=com.streakup.ai&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="app-store-btn bg-black text-white px-6 py-4 rounded-2xl flex items-center gap-3">
+                            <svg width="28" height="28" viewBox="0 0 512 512">
+                                <defs>
+                                    <linearGradient id="gHero1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00A0E4"/>
+                                        <stop offset="100%" stop-color="#0079CA"/>
+                                    </linearGradient>
+                                    <linearGradient id="gHero2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00F076"/>
+                                        <stop offset="100%" stop-color="#04C965"/>
+                                    </linearGradient>
+                                    <linearGradient id="gHero3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#FF3A44"/>
+                                        <stop offset="100%" stop-color="#E11732"/>
+                                    </linearGradient>
+                                    <linearGradient id="gHero4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#FFE000"/>
+                                        <stop offset="100%" stop-color="#FFB300"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z" fill="url(#gHero1)"/>
+                                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z" fill="url(#gHero3)"/>
+                                <path d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="url(#gHero2)"/>
+                                <path d="M472.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8z" fill="url(#gHero4)"/>
+                            </svg>
+                            <div class="text-left">
+                                <div class="text-xs opacity-70">Get it on</div>
+                                <div class="text-sm font-semibold">Google Play</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column - Phone Mockups -->
+                <div class="relative h-[500px] lg:h-[600px] flex items-center justify-center">
+                    <!-- Mockup 1 - Camera View -->
+                    <div class="mockup-3d absolute left-0 lg:left-4 top-8 z-10 animate-float w-64 lg:w-72">
+                        <img src="image/1.png" alt="Streak.ai Scanner" class="w-full h-full object-contain">
+                    </div>
+
+                    <!-- Doodle Arrow -->
+                    <div class="absolute inset-0 z-30 pointer-events-none hidden lg:flex items-center justify-center translate-x-6 -translate-y-4">
+                        <svg width="180" height="100" viewBox="0 0 180 100" fill="none" class="w-40 lg:w-48">
+                            <path d="M5 75 Q 50 80, 85 55 T 155 18" stroke="#9CA3AF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5 5" fill="none"/>
+                            <path d="M140 30 L157 18 L148 38" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <circle cx="5" cy="75" r="3.5" fill="#9CA3AF"/>
+                        </svg>
+                    </div>
+
+                    <!-- Mockup 2 - Results UI -->
+                    <div class="mockup-3d-2 absolute right-0 lg:right-4 top-24 z-20 animate-float-delayed w-64 lg:w-72">
+                        <img src="image/2.png" alt="Streak.ai Results" class="w-full h-full object-contain">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What does Streak.ai include? Section -->
+    <section id="features" class="py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-center mb-16 tracking-tight">What does Streak.ai include?</h2>
+
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                <!-- Left - Phone Mockup -->
+                <div class="flex justify-center lg:justify-end">
+                    <img src="image/3.png" alt="Food Log" class="w-[20.8rem] lg:w-[22rem] sticky top-32 object-contain">
+                </div>
+
+                <!-- Right - Feature Cards -->
+                <div class="space-y-4">
+                    <div class="feature-card active rounded-2xl p-6 border" data-tab="1">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <path d="M21 15l-5-5L5 21"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Food Log</span>
+                                <h3 class="font-bold text-lg mt-1 mb-2">Track Your Food With Just a Picture</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">Simply snap a photo of your meal and our advanced AI instantly identifies every ingredient, calculates calories, and breaks down your macros with remarkable accuracy.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card rounded-2xl p-6 border border-transparent" data-tab="2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <path d="M21 21l-4.35-4.35"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Search Our Database of over 1 million foods</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">Access our comprehensive database with millions of foods, restaurant meals, and packaged products. Find accurate nutritional information in seconds.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card rounded-2xl p-6 border border-transparent" data-tab="3">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Complete Progress Tracking and AI suggestions</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">Track your weight, body measurements, and fitness goals over time. Get personalized AI-powered recommendations to optimize your nutrition.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card rounded-2xl p-6 border border-transparent" data-tab="4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2">
+                                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Keep track of your water and daily exercise</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">Log your water intake with smart reminders and track your workouts. See how exercise impacts your daily calorie goals in real-time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why choose Streak.ai? Section -->
+    <section class="py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight">Why choose Streak.ai?</h2>
+                <p class="text-lg text-gray-600">Streak.ai is the most advanced calorie tracker.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="hover-card bg-white rounded-3xl p-8 border border-gray-100">
+                    <div class="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Free up your time</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Automatic macro and calorie calculation eliminates manual entry. Spend less time logging and more time living. Our AI handles the math so you don't have to.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="hover-card bg-white rounded-3xl p-8 border border-gray-100">
+                    <div class="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Integrate with your favorite fitness products</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Seamlessly sync with Apple Health, Google Fit, Fitbit, and more. Your steps, exercises, and heart rate data automatically inform your calorie goals.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="hover-card bg-white rounded-3xl p-8 border border-gray-100">
+                    <div class="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Lose weight effortlessly</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Using your phone's depth sensor, we calculate precise food volume for accurate calorie counts. No guesswork, no estimation — just precise tracking that works.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 lg:py-28 bg-[#F5F5F0]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight">About Streakup</h2>
+            <p class="text-lg text-gray-600 mb-12">Pure transparency, powered by AI</p>
+            <div class="relative">
+                <svg class="absolute -top-8 -left-4 w-12 h-12 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+                <p class="text-lg lg:text-xl text-gray-700 leading-relaxed italic max-w-3xl mx-auto">
+                    "Studies show that consumers who strictly audit ingredient listings significantly reduce risk indices for chronic metabolic strain. Streakup turns complex chemical labels into pure transparency."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 lg:py-32">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight">FAQ</h2>
+                <p class="text-lg text-gray-600">Frequently asked questions</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">What is Streakup?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="p-6 pt-0 text-gray-600 leading-relaxed">
+                            Streakup is a comprehensive health platform combining habit consistency, professional gym tracking, and AI-powered nutrition analysis into one seamless, private app available on Android.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">Is my data private?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="p-6 pt-0 text-gray-600 leading-relaxed">
+                            Absolutely. Streakup uses a local-first architecture with an Isar embedded database on your device. Your health data stays entirely on your phone.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">How does the food scanner work?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="p-6 pt-0 text-gray-600 leading-relaxed">
+                            Point your camera at a barcode, nutrition label, or ingredient list. The app captures the text using OCR and sends it to our AI backend. It returns a detailed breakdown: health score, macros, additive flags, and processing ratio. You can also describe a meal in natural language — the AI estimates calories, protein, carbs, and fat.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">Does it work offline?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="p-6 pt-0 text-gray-600 leading-relaxed">
+                            Yes. All core features — habit tracking, workout logging, nutrition logging — work fully offline. Only AI-powered food analysis requires an internet connection. Your data is stored locally on your device at all times.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">What exercises are included?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="p-6 pt-0 text-gray-600 leading-relaxed">
+                            Streakup includes a built-in library of over 1,300 exercises organized by muscle group (Chest, Back, Legs, Shoulders, Arms, Core) and equipment type (Barbell, Dumbbell, Machine, Cable, Bodyweight). You can search, filter, and add any exercise to your workouts or create custom routines.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">Are there usage limits?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="p-6 pt-0 text-gray-600 leading-relaxed">
+                            To ensure fair usage, AI analysis is limited to 100,000 tokens per day. If you reach your limit, you can add your own Gemini API key in Profile settings as a fallback.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Join Community -->
+<section class="py-20 lg:py-28 bg-[#F5F5F0] border-t border-gray-200/50">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+        <!-- Badge -->
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#1877F2] bg-[#1877F2]/10 px-3 py-1 rounded-full mb-4">
+            Connect & Grow
+        </span>
+        
+        <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-4 tracking-tight">
+            Join the Streak.ai Community
+        </h2>
+        
+        <p class="text-lg text-gray-600 max-w-xl mx-auto mb-10 leading-relaxed">
+            Connect with fellow fitness enthusiasts, share your daily meal wins, and get direct updates on our latest AI features.
+        </p>
+
+        <div class="flex flex-col items-center justify-center gap-3">
+            <a href="https://web.facebook.com/share/g/1DtN3pXcsz/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="inline-flex items-center gap-3 bg-[#1877F2] text-white px-8 py-4 rounded-xl font-semibold shadow-lg shadow-[#1877F2]/20 hover:bg-[#166fe5] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <span>Join our Facebook Group</span>
+            </a>
+            
+           
+        </div>
+    </div>
+</section>
+
+    <!-- Coming Soon Sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar-panel" id="sidebarPanel">
+        <button id="sidebarClose" class="sidebar-close">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="flex flex-col items-center justify-center flex-1 text-center">
+            <img src="image/icon.png" alt="Streak.ai" class="w-20 h-20 mb-6">
+            <h3 class="text-2xl font-extrabold mb-2">Coming Soon</h3>
+            <p class="text-gray-500 text-sm">The App Store version is on its way. Stay tuned!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#F5F5F0] pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- Logo & Badges -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="image/icon.png" alt="Streak.ai" class="w-8 h-8">
+                        <span class="font-bold text-xl tracking-tight">Streak.ai</span>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <button id="appStoreFooter" class="bg-black text-white px-4 py-2.5 rounded-xl flex items-center gap-2 text-xs font-medium">
+                            <svg width="16" height="16" viewBox="0 0 384 512">
+                            <defs>
+                                <linearGradient id="appleGradFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffffff"/>
+                                    <stop offset="100%" stop-color="#d1d5db"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#appleGradFoot)" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-111.1-59.4-126.5zM231.6 2.7c-22.6 1-45.6 13.7-59.6 32.6-13 17.7-23.5 43.7-19.5 69.5 24.7 2.4 48.8-12.5 62.6-31.2 13.3-18.3 21.1-43.2 16.5-70.9z"/>
+                            </svg>
+                            App Store
+                        </button>
+                        <a href="https://play.google.com/store/apps/details?id=com.streakup.ai&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="bg-black text-white px-4 py-2.5 rounded-xl flex items-center gap-2 text-xs font-medium">
+                            <svg width="16" height="16" viewBox="0 0 512 512">
+                                <defs>
+                                    <linearGradient id="gFoot1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00A0E4"/>
+                                        <stop offset="100%" stop-color="#0079CA"/>
+                                    </linearGradient>
+                                    <linearGradient id="gFoot2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00F076"/>
+                                        <stop offset="100%" stop-color="#04C965"/>
+                                    </linearGradient>
+                                    <linearGradient id="gFoot3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#FF3A44"/>
+                                        <stop offset="100%" stop-color="#E11732"/>
+                                    </linearGradient>
+                                    <linearGradient id="gFoot4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#FFE000"/>
+                                        <stop offset="100%" stop-color="#FFB300"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z" fill="url(#gFoot1)"/>
+                                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z" fill="url(#gFoot3)"/>
+                                <path d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="url(#gFoot2)"/>
+                                <path d="M472.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8z" fill="url(#gFoot4)"/>
+                            </svg>
+                            Google Play
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Legal Links -->
+                <div>
+                    <h4 class="font-bold text-sm mb-4">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="text-sm text-gray-600 hover:text-charcoal transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-sm text-gray-600 hover:text-charcoal transition-colors">Terms of Use</a></li>
+                   
+                    </ul>
+                </div>
+
+                <!-- Company Links -->
+                <div>
+                    <h4 class="font-bold text-sm mb-4">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:velocatstudios&#64;gmail&#46;com" class="text-sm text-gray-600 hover:text-charcoal transition-colors">Contact</a></li>
+                        <li><a href="https://web.facebook.com/share/g/1DtN3pXcsz/" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-charcoal transition-colors">Join our FB Community</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">© Copyright 2026, All rights reserved</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://web.facebook.com/profile.php?id=61590953841303" target="_blank" rel="noopener noreferrer" class="social-icon text-gray-600 hover:text-charcoal">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/streak.aii?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="social-icon text-gray-600 hover:text-charcoal">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:velocatstudios&#64;gmail&#46;com" class="social-icon text-gray-600 hover:text-charcoal">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
