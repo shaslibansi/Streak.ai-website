@@ -44,7 +44,7 @@
     <main class="pt-28 pb-20 px-6">
         <div class="max-w-3xl mx-auto">
             <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-2">Privacy Policy</h1>
-            <p class="text-gray-500 text-sm mb-8">Last updated: June 14, 2026</p>
+            <p class="text-gray-500 text-sm mb-8">Last updated: June 19, 2026</p>
 
             <div class="prose prose-gray max-w-none space-y-6 text-gray-700 leading-relaxed">
 
@@ -72,15 +72,24 @@
                     <li>Habit tracking data</li>
                     <li>Progress photos</li>
                     <li>Food scan history (barcodes, nutrition labels, ingredient lists)</li>
+                    <li>Step count data (via Health Connect, device sensor, or manual entry)</li>
                 </ul>
 
-                <h3 class="font-semibold text-charcoal mt-6 mb-2">1.3 Device Information</h3>
+                <h3 class="font-semibold text-charcoal mt-6 mb-2">1.3 Step Tracking Data</h3>
+                <ul class="list-disc pl-6 space-y-1">
+                    <li><strong>Health Connect (Android):</strong> With your permission, the app reads daily step counts from Google Health Connect. This is read-only — steps are never written back.</li>
+                    <li><strong>Device Step Sensor:</strong> When Health Connect is unavailable, the app may read the Android hardware step counter sensor. Cumulative steps since last boot are stored locally to calculate today's count.</li>
+                    <li><strong>Manual Entry:</strong> You can add or subtract steps using quick-log buttons in the steps screen.</li>
+                </ul>
+                <p class="mt-2">Step data is stored locally in the app's embedded database (Isar) and system preferences. Step data is <strong>never</strong> transmitted to our servers or any third party.</p>
+
+                <h3 class="font-semibold text-charcoal mt-6 mb-2">1.4 Device Information</h3>
                 <ul class="list-disc pl-6 space-y-1">
                     <li>Android Device ID (used for anonymous identification and AI token tracking)</li>
                     <li>Device model and operating system version</li>
                 </ul>
 
-                <h3 class="font-semibold text-charcoal mt-6 mb-2">1.4 Purchase Information</h3>
+                <h3 class="font-semibold text-charcoal mt-6 mb-2">1.5 Purchase Information</h3>
                 <ul class="list-disc pl-6 space-y-1">
                     <li>Purchase token and order ID (for in-app purchase verification)</li>
                     <li>Product ID for the unlock purchase</li>
@@ -134,14 +143,18 @@
                                 <td class="py-2 pr-4">Open Food Facts</td>
                                 <td class="py-2 pr-4">Public product barcode lookup</td>
                             </tr>
-                            <tr>
-                                <td class="py-2 pr-4">Google Play Billing</td>
-                                <td class="py-2 pr-4">In-app purchase processing</td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 pr-4">Llm</td>
-                                <td class="py-2 pr-4">Server-side LLM food analysis</td>
-                            </tr>
+                    <tr>
+                        <td class="py-2 pr-4">Google Play Billing</td>
+                        <td class="py-2 pr-4">In-app purchase processing</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 pr-4">Google Health Connect</td>
+                        <td class="py-2 pr-4">Step count data source (optional, Android only)</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 pr-4">Llm</td>
+                        <td class="py-2 pr-4">Server-side LLM food analysis</td>
+                    </tr>
                         </tbody>
                     </table>
                 </div>
