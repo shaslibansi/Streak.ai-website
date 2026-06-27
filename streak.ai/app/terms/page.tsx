@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Section, SubSection } from "@/app/components/LegalSection";
 
 export const metadata: Metadata = {
-  title: "Terms of Use - Streak.ai",
+  title: "Terms of Use",
   description:
     "Streak.ai Terms of Use — governing your use of the Streak.ai mobile application and related services.",
 };

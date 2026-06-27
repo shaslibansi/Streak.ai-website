@@ -146,7 +146,7 @@ export default function Hero({ onAppStoreClick }: HeroProps) {
             <div className="mockup-3d absolute left-0 lg:left-4 top-8 z-10 animate-float w-64 lg:w-72">
               <Image
                 src="/images/1.png"
-                alt="Streak.ai Scanner"
+                alt="Streak.ai food scanner camera interface showing a meal being captured for AI calorie analysis"
                 width={288}
                 height={576}
                 className="w-full h-full object-contain"
@@ -186,7 +186,7 @@ export default function Hero({ onAppStoreClick }: HeroProps) {
             <div className="mockup-3d-2 absolute right-0 lg:right-4 top-24 z-20 animate-float-delayed w-64 lg:w-72">
               <Image
                 src="/images/2.png"
-                alt="Streak.ai Results"
+                alt="Streak.ai nutrition results screen showing calories, macros, and ingredient breakdown from food photo"
                 width={288}
                 height={576}
                 className="w-full h-full object-contain"

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Section, SubSection } from "@/app/components/LegalSection";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Streak.ai",
+  title: "Privacy Policy",
   description:
     "Streak.ai Privacy Policy — how we collect, use, store, and protect your information.",
 };

@@ -97,7 +97,7 @@ export default function Features() {
           <div className="flex justify-center lg:justify-end">
             <Image
               src="/images/3.png"
-              alt="Food Log"
+              alt="Streak.ai food log screen showing daily meal tracking with calorie and macro breakdown"
               width={352}
               height={704}
               className="w-[20.8rem] lg:w-[22rem] sticky top-32 object-contain"
