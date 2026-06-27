@@ -140,6 +140,22 @@ body {
   animation: fadeInSlideUp 0.3s ease-out forwards;
 }
 
+.hamburger span {
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .glow-ring {
   filter: drop-shadow(0 0 8px rgba(255,255,255,0.1));
 }
