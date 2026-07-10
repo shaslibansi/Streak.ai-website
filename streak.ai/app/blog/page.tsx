@@ -5,6 +5,12 @@ const siteUrl = "https://streak.ai";
 
 const blogPosts = [
   {
+    title: "Why privacy-first fitness apps matter for your health data",
+    description:
+      "Learn why local-first design and private data handling are becoming essential in modern fitness apps.",
+    href: "/blog/privacy-first-fitness-app",
+  },
+  {
     title: "How Streak.ai makes calorie tracking effortless",
     description:
       "Learn how picture-based nutrition tracking helps users stay consistent without manual logging.",
