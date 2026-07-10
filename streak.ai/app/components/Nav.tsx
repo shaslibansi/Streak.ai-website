@@ -31,6 +31,7 @@ export default function Nav({ onAppStoreClick }: NavProps) {
     { href: "#features", label: "Features" },
     { href: "#about", label: "About" },
     { href: "#faq", label: "FAQ" },
+    { href: "/blog", label: "Blogs" },
   ];
 
   return (
@@ -45,7 +46,7 @@ export default function Nav({ onAppStoreClick }: NavProps) {
             {/* Logo */}
             <a href="#" className="flex items-center gap-2">
               <Image
-                src="/images/icon.png"
+                src="/images/icon-v2.png"
                 alt="Streak.ai"
                 width={32}
                 height={32}

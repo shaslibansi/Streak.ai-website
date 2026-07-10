@@ -51,7 +51,7 @@ export default function ComingSoonSidebar({
 
         <div className="flex flex-col items-center justify-center flex-1 text-center">
           <Image
-            src="/images/icon.png"
+            src="/images/icon-v2.png"
             alt="Streak.ai"
             width={80}
             height={80}

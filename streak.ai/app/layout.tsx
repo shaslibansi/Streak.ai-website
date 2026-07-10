@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/icon.png",
-    apple: "/images/icon.png",
+    icon: "/images/icon-v2.png",
+    apple: "/images/icon-v2.png",
   },
   openGraph: {
     type: "website",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     images: [
       {
-        url: "/images/icon.png",
+        url: "/images/icon-v2.png",
         width: 512,
         height: 512,
         alt: "Streak.ai - AI Calorie Tracker",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: "Streak.ai — AI-Powered Calorie Tracker",
     description:
       "Snap a photo of any meal and our AI instantly recognizes ingredients, calculates calories, and breaks down your macros.",
-    images: ["/images/icon.png"],
+    images: ["/images/icon-v2.png"],
     site: "@streak_ai",
     creator: "@streak_ai",
   },
