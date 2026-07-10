@@ -150,6 +150,14 @@ export default function Footer({ onAppStoreClick }: FooterProps) {
             <ul className="space-y-3">
               <li>
                 <a
+                  href="/blog"
+                  className="text-sm text-gray-600 hover:text-charcoal transition-colors"
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
                   href="mailto:velocatstudios@gmail.com"
                   className="text-sm text-gray-600 hover:text-charcoal transition-colors"
                 >
