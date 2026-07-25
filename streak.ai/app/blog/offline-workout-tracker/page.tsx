@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const siteUrl = "https://downloadstreak.ai";
+const siteUrl = "https://streak.ai";
 const postSlug = "/blog/offline-workout-tracker";
 const publishedDate = "2026-06-25";
 const modifiedDate = "2026-07-10";

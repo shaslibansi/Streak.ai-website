@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const siteUrl = "https://downloadstreak.ai";
+const siteUrl = "https://streak.ai";
 
 const blogPosts = [
   {

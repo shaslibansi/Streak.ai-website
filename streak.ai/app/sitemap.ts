@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://downloadstreak.ai";
+const siteUrl = "https://streak.ai";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

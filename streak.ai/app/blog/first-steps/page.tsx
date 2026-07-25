@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const siteUrl = "https://downloadstreak.ai";
+const siteUrl = "https://streak.ai";
 const postSlug = "/blog/first-steps";
 const publishedDate = "2026-06-15";
 const modifiedDate = "2026-07-10";

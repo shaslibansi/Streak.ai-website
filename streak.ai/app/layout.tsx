@@ -9,7 +9,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://downloadstreak.ai";
+const siteUrl = "https://streak.ai";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
