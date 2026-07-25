@@ -5,6 +5,33 @@ const siteUrl = "https://streak.ai";
 
 const blogPosts = [
   {
+    title: "Track Your Progress Without Opening the App — Streak.ai's New Home Screen Widgets",
+    description:
+      "New Android home screen widgets let you see your streak, water intake, macros, and workout progress at a glance. No app open required.",
+    href: "/blog/home-screen-widgets",
+    category: "Product Updates",
+    date: "2026-07-25",
+    dateLabel: "July 25, 2026",
+  },
+  {
+    title: "Smarter Food Scanning: Enhanced Ingredient Safety Analysis and Allergen Detection",
+    description:
+      "Streak.ai's food scanner now detects 30+ allergen categories, classifies ingredients by safety level, and identifies IARC-classified carcinogens.",
+    href: "/blog/smarter-food-scanning",
+    category: "AI Food Scanning",
+    date: "2026-07-25",
+    dateLabel: "July 25, 2026",
+  },
+  {
+    title: "Deeper Health Insights: New Visual Tools for Understanding Your Food",
+    description:
+      "Streak.ai introduces a redesigned details screen with glass-morphism cards, micronutrient tracking, and a shareable analysis summary card.",
+    href: "/blog/deeper-health-insights",
+    category: "Product Updates",
+    date: "2026-07-25",
+    dateLabel: "July 25, 2026",
+  },
+  {
     title: "Why privacy-first fitness apps matter for your health data",
     description:
       "Learn why local-first design and private data handling are becoming essential in modern fitness apps.",
