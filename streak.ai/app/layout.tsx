@@ -89,6 +89,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   category: "health and fitness",
+  verification: {
+    google: "-5JSvAQhTK-RuRAJ_u9KGyQq5xOT8i43BDM4TM29_Yo",
+  },
 };
 
 export default function RootLayout({
