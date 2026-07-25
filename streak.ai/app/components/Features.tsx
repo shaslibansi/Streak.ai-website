@@ -100,7 +100,7 @@ export default function Features() {
               alt="Streak.ai food log screen showing daily meal tracking with calorie and macro breakdown"
               width={352}
               height={704}
-              className="w-[20.8rem] lg:w-[22rem] sticky top-32 object-contain"
+              className="h-auto w-[20.8rem] lg:w-[22rem] sticky top-32 object-contain"
             />
           </div>
 

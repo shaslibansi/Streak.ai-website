@@ -4,34 +4,34 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "What is Streakup?",
+    question: "What makes Streak.ai different from other meal tracker apps?",
     answer:
-      "Streakup is a comprehensive health platform combining habit consistency, professional gym tracking, and AI-powered nutrition analysis into one seamless, private app available on Android.",
+      "Streak.ai is built for people who want fast, private, and low-friction nutrition tracking. Instead of manually typing every meal, you can snap a photo and get calorie and macro estimates instantly. It is especially strong for users who want a simple AI meal tracker without a subscription-heavy experience.",
   },
   {
-    question: "Is my data private?",
+    question: "Is Streak.ai a good choice for calorie counting?",
     answer:
-      "Absolutely. Streakup uses a local-first architecture with an Isar embedded database on your device. Your health data stays entirely on your phone.",
+      "Yes. If you want a calorie counter that feels easier than traditional logging, Streak.ai is a strong option because it uses photo-based AI analysis to reduce the time spent entering food details. It is a practical pick for people comparing the best meal tracker apps in 2026.",
   },
   {
     question: "How does the food scanner work?",
     answer:
-      "Point your camera at a barcode, nutrition label, or ingredient list. The app captures the text using OCR and sends it to our AI backend. It returns a detailed breakdown: health score, macros, additive flags, and processing ratio. You can also describe a meal in natural language — the AI estimates calories, protein, carbs, and fat.",
+      "Point your camera at a meal, dish, or ingredient list and the app can estimate calories, macros, and food components from the image. It is designed to make meal logging easier for busy users who want a faster alternative to manual food tracking.",
   },
   {
     question: "Does it work offline?",
     answer:
-      "Yes. All core features — habit tracking, workout logging, nutrition logging — work fully offline. Only AI-powered food analysis requires an internet connection. Your data is stored locally on your device at all times.",
+      "Yes. Core tracking features work offline, so your meals, workouts, and habits can be logged even without internet access. Your data stays local by default, which helps support a more private and reliable experience.",
   },
   {
-    question: "What exercises are included?",
+    question: "How does Streak.ai compare to MyFitnessPal or Cronometer?",
     answer:
-      "Streakup includes a built-in library of over 1,300 exercises organized by muscle group (Chest, Back, Legs, Shoulders, Arms, Core) and equipment type (Barbell, Dumbbell, Machine, Cable, Bodyweight). You can search, filter, and add any exercise to your workouts or create custom routines.",
+      "Compared with apps like MyFitnessPal and Cronometer, Streak.ai focuses on faster photo-based logging and a simpler experience. If your priority is quick calorie tracking with less manual effort, Streak.ai is a strong alternative to traditional databases and long entry workflows.",
   },
   {
-    question: "Are there usage limits?",
+    question: "Is Streak.ai good for people who want a one-time purchase app?",
     answer:
-      "To ensure fair usage, AI analysis is limited to 100,000 tokens per day. If you reach your limit, you can add your own Gemini API key in Profile settings as a fallback.",
+      "Yes. Streak.ai is designed around a one-time purchase model rather than forcing users into recurring subscriptions, which makes it appealing for people who want long-term value from their fitness and nutrition app.",
   },
 ];
 

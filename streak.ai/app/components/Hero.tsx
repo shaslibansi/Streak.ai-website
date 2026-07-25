@@ -24,9 +24,10 @@ export default function Hero({ onAppStoreClick }: HeroProps) {
 
             {/* Subtext */}
             <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
-              Snap a photo of any meal and our AI instantly recognizes
-              ingredients, calculates calories, and breaks down your macros. No
-              more manual logging — just point, shoot, and track.
+              Looking for the best AI meal tracker or calorie counter that feels
+              faster than manual logging? Streak.ai helps you snap a photo, get
+              instant nutrition estimates, and stay consistent without the usual
+              hassle of typing everything in.
             </p>
 
             {/* Download Buttons */}
@@ -149,7 +150,7 @@ export default function Hero({ onAppStoreClick }: HeroProps) {
                 alt="Streak.ai food scanner camera interface showing a meal being captured for AI calorie analysis"
                 width={288}
                 height={576}
-                className="w-full h-full object-contain"
+                className="h-auto w-full max-w-[18rem] object-contain"
               />
             </div>
 
@@ -189,7 +190,7 @@ export default function Hero({ onAppStoreClick }: HeroProps) {
                 alt="Streak.ai nutrition results screen showing calories, macros, and ingredient breakdown from food photo"
                 width={288}
                 height={576}
-                className="w-full h-full object-contain"
+                className="h-auto w-full max-w-[18rem] object-contain"
               />
             </div>
           </div>

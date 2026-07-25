@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 
 interface FooterProps {
   onAppStoreClick: () => void;
@@ -151,6 +152,7 @@ export default function Footer({ onAppStoreClick }: FooterProps) {
               <li>
                 <a
                   href="/blog"
+                  onClick={() => trackEvent("blog_click", { source: "footer" })}
                   className="text-sm text-gray-600 hover:text-charcoal transition-colors"
                 >
                   Blog

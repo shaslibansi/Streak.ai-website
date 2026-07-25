@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://streak.ai";
+const siteUrl = "https://downloadstreak.ai";
 
 export default function robots(): MetadataRoute.Robots {
   return {

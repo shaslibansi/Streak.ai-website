@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://streak.ai";
+const siteUrl = "https://downloadstreak.ai";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -30,6 +30,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${siteUrl}/blog/privacy-first-fitness-app`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${siteUrl}/blog/one-time-purchase-fitness-app`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${siteUrl}/blog/offline-workout-tracker`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
