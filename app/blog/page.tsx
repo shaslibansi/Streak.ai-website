@@ -106,7 +106,7 @@ export const metadata: Metadata = {
     siteName: "Streak.ai",
     images: [
       {
-        url: `${siteUrl}/images/icon-v2.png`,
+        url: `${siteUrl}/images/icon.png`,
         width: 512,
         height: 512,
         alt: "Streak.ai Blog",
@@ -119,7 +119,7 @@ export const metadata: Metadata = {
       "Streak.ai Blog | Best AI Meal Tracker, Calorie Counter & Privacy-First Fitness Tips",
     description:
       "Explore practical guides and insights on the best AI meal tracker tools, calorie counting, meal logging, habit building, and privacy-first fitness apps.",
-    images: [`${siteUrl}/images/icon-v2.png`],
+    images: [`${siteUrl}/images/icon.png`],
   },
 };
 

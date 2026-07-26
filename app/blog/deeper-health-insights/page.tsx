@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "Streak.ai",
     images: [
       {
-        url: `${siteUrl}/images/icon-v2.png`,
+        url: `${siteUrl}/images/icon.png`,
         width: 512,
         height: 512,
         alt: "Streak.ai health insights screen",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
       "Deeper Health Insights: New Visual Tools for Understanding Your Food",
     description:
       "Streak.ai introduces a redesigned details screen with glass-morphism cards, micronutrient tracking, health score visualization, and a shareable analysis summary card.",
-    images: [`${siteUrl}/images/icon-v2.png`],
+    images: [`${siteUrl}/images/icon.png`],
   },
 };
 
@@ -79,7 +79,7 @@ const articleSchema = {
   datePublished: publishedDate,
   dateModified: modifiedDate,
   mainEntityOfPage: `${siteUrl}${postSlug}`,
-  image: `${siteUrl}/images/icon-v2.png`,
+  image: `${siteUrl}/images/icon.png`,
   articleSection: "Product Updates",
   wordCount: 850,
 };

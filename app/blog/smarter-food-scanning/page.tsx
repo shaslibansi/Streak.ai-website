@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Streak.ai",
     images: [
       {
-        url: `${siteUrl}/images/icon-v2.png`,
+        url: `${siteUrl}/images/icon.png`,
         width: 512,
         height: 512,
         alt: "Streak.ai food scanner analysis",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
       "Smarter Food Scanning: Enhanced Ingredient Safety Analysis and Allergen Detection",
     description:
       "Streak.ai's food scanner now detects 30+ allergen categories and identifies IARC-classified carcinogens.",
-    images: [`${siteUrl}/images/icon-v2.png`],
+    images: [`${siteUrl}/images/icon.png`],
   },
 };
 
@@ -78,7 +78,7 @@ const articleSchema = {
   datePublished: publishedDate,
   dateModified: modifiedDate,
   mainEntityOfPage: `${siteUrl}${postSlug}`,
-  image: `${siteUrl}/images/icon-v2.png`,
+  image: `${siteUrl}/images/icon.png`,
   articleSection: "AI Food Scanning",
   wordCount: 900,
 };

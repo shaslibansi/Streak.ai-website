@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     siteName: "Streak.ai",
     images: [
       {
-        url: `${siteUrl}/images/icon-v2.png`,
+        url: `${siteUrl}/images/icon.png`,
         width: 512,
         height: 512,
         alt: "Streak.ai one-time purchase fitness app",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     title: "Why one-time purchase fitness apps beat subscriptions",
     description:
       "Compare subscription vs one-time purchase fitness apps and see why Streak.ai chose a buy-once model for private, offline-first health tracking.",
-    images: [`${siteUrl}/images/icon-v2.png`],
+    images: [`${siteUrl}/images/icon.png`],
   },
 };
 
@@ -103,7 +103,7 @@ export default function OneTimePurchasePage() {
             datePublished: publishedDate,
             dateModified: modifiedDate,
             mainEntityOfPage: `${siteUrl}${postSlug}`,
-            image: `${siteUrl}/images/icon-v2.png`,
+            image: `${siteUrl}/images/icon.png`,
             articleSection: "Pricing",
             wordCount: 700,
           }),

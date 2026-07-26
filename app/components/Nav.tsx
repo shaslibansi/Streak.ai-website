@@ -47,7 +47,7 @@ export default function Nav({ onAppStoreClick }: NavProps) {
             {/* Logo */}
             <a href="#" className="flex items-center gap-2">
               <Image
-                src="/images/icon-v2.png"
+                src="/images/icon.png"
                 alt="Streak.ai"
                 width={32}
                 height={32}

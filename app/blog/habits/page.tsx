@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Streak.ai",
     images: [
       {
-        url: `${siteUrl}/images/icon-v2.png`,
+        url: `${siteUrl}/images/icon.png`,
         width: 512,
         height: 512,
         alt: "Building healthy habits with Streak.ai",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Why Simple Food Tracking Leads to Better Long-Term Habits",
     description:
       "Discover why quick and effortless logging helps people stay consistent and build lasting nutrition habits without burnout.",
-    images: [`${siteUrl}/images/icon-v2.png`],
+    images: [`${siteUrl}/images/icon.png`],
   },
 };
 
@@ -75,7 +75,7 @@ const articleSchema = {
   datePublished: publishedDate,
   dateModified: modifiedDate,
   mainEntityOfPage: `${siteUrl}${postSlug}`,
-  image: `${siteUrl}/images/icon-v2.png`,
+  image: `${siteUrl}/images/icon.png`,
   articleSection: "Habit Building",
   wordCount: 700,
 };

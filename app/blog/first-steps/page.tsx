@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Streak.ai",
     images: [
       {
-        url: `${siteUrl}/images/icon-v2.png`,
+        url: `${siteUrl}/images/icon.png`,
         width: 512,
         height: 512,
         alt: "Streak.ai AI food scanner analyzing a meal",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "How Streak.ai AI Food Scanning Makes Calorie Tracking Effortless",
     description:
       "Learn how Streak.ai's AI food scanner analyzes meals from photos — no manual logging, no barcode scanning, just instant nutrition data.",
-    images: [`${siteUrl}/images/icon-v2.png`],
+    images: [`${siteUrl}/images/icon.png`],
   },
 };
 
@@ -75,7 +75,7 @@ const articleSchema = {
   datePublished: publishedDate,
   dateModified: modifiedDate,
   mainEntityOfPage: `${siteUrl}${postSlug}`,
-  image: `${siteUrl}/images/icon-v2.png`,
+  image: `${siteUrl}/images/icon.png`,
   articleSection: "AI Food Scanning",
   wordCount: 650,
 };

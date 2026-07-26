@@ -16,7 +16,7 @@ export default function Footer({ onAppStoreClick }: FooterProps) {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <Image
-                src="/images/icon-v2.png"
+                src="/images/icon.png"
                 alt="Streak.ai"
                 width={32}
                 height={32}

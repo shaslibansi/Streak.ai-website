@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/icon-v2.png",
-    apple: "/images/icon-v2.png",
+    icon: "/images/icon.png?v=4",
+    apple: "/images/icon.png?v=4",
   },
   openGraph: {
     type: "website",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     images: [
       {
-        url: `${siteUrl}/images/icon-v2.png`,
+        url: `${siteUrl}/images/icon.png`,
         width: 512,
         height: 512,
         alt: "Streak.ai - AI Calorie Tracker",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     title: "Streak.ai — AI-Powered, Privacy-First Fitness Tracker",
     description:
       "Track meals, workouts, and habits with private AI-powered nutrition analysis, offline support, and a one-time purchase model.",
-    images: [`${siteUrl}/images/icon-v2.png`],
+    images: [`${siteUrl}/images/icon.png`],
     site: "@streakai",
     creator: "@streakai",
   },

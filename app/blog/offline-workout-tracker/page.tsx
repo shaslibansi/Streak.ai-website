@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     siteName: "Streak.ai",
     images: [
       {
-        url: `${siteUrl}/images/icon-v2.png`,
+        url: `${siteUrl}/images/icon.png`,
         width: 512,
         height: 512,
         alt: "Streak.ai offline workout tracker",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     title: "How offline workout tracking improves consistency",
     description:
       "Discover why offline-first workout tracking removes barriers to consistency and how Streak.ai keeps your data local and private.",
-    images: [`${siteUrl}/images/icon-v2.png`],
+    images: [`${siteUrl}/images/icon.png`],
   },
 };
 
@@ -103,7 +103,7 @@ export default function OfflineWorkoutPage() {
             datePublished: publishedDate,
             dateModified: modifiedDate,
             mainEntityOfPage: `${siteUrl}${postSlug}`,
-            image: `${siteUrl}/images/icon-v2.png`,
+            image: `${siteUrl}/images/icon.png`,
             articleSection: "Offline Tracking",
             wordCount: 650,
           }),
